@@ -1,3 +1,3 @@
 # Galvanize Inbox using angularjs
 
-[Live Site]("#")
+[Live Site]("https://dm-angular-inbox.firebaseapp.com/")

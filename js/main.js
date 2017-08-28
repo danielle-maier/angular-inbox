@@ -7,6 +7,6 @@
       controller: function (){
         console.log("hi");
       },
-      templateUrl: 'angular-inbox/templates/inbox.html'
+      templateUrl: 'templates/inbox.html'
     });
 })();
