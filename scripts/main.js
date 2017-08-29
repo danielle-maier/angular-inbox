@@ -5,7 +5,8 @@
     .module('angular-inbox', [])
     .component('inbox', {
       controller: function (){
-        console.log("hi");
+        const data = angular.fromJson(json);
+        console.log(data);
       },
       templateUrl: 'templates/compose-form.html'
     });
