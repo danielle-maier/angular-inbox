@@ -14,7 +14,7 @@
   text-decoration: none;
 }
 
-.message + .message {
+.message+.message {
   border-top: 1px solid #efefef;
 }
 
@@ -53,10 +53,7 @@
   display: inline;
 }
 
-.toolbar select,
-.toolbar button,
-.toolbar a,
-.toolbar .badge {
+.toolbar select, .toolbar button, .toolbar a, .toolbar .badge {
   margin-right: .5em;
   margin-bottom: .5em;
 }
