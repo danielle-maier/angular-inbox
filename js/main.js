@@ -7,6 +7,6 @@
       controller: function (){
         console.log("hi");
       },
-      templateUrl: 'templates/inbox.html'
+      templateUrl: 'templates/compose-form.html'
     });
 })();
