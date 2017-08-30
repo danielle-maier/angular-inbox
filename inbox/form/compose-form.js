@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('angular-inbox')
+    .module('app')
     .component('composeform', {
       controller: function() {
         console.log("hi");
       },
-      templateUrl: './form/compose-form.html'
+      templateUrl: './inbox/form/compose-form.html'
     });
 })();

@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('angular-inbox', [])
+    .module('app', [])
 })();

@@ -2,8 +2,8 @@
   'use strict';
 
   angular
-    .module('angular-inbox')
-    .component('messages', {
+    .module('app')
+    .component('message', {
       controller: function() {
         const vm = this;
         vm.$onInit = function() {
@@ -11,6 +11,6 @@
           vm.message = data;
         }
       },
-      templateUrl: './message/message.html'
+      templateUrl: './inbox/message/message.html'
     });
 })();

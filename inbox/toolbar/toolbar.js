@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('angular-inbox')
+    .module('app')
     .component('toolbar', {
       controller: function() {
         console.log("hi");
       },
-      templateUrl: './toolbar/toolbar.html'
+      templateUrl: './inbox/toolbar/toolbar.html'
     });
 })();
