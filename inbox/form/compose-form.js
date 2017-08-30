@@ -5,7 +5,7 @@
     .module('app')
     .component('composeform', {
       controller: function() {
-        console.log("hi");
+
       },
       templateUrl: './inbox/form/compose-form.html'
     });

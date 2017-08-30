@@ -10,7 +10,7 @@
           const data = angular.fromJson(json);
           vm.message = data;
 
-          vm.toggleStar= function(messages){
+          vm.toggleStar = function(messages) {
             messages.starred = !messages.starred;
           }
         }
