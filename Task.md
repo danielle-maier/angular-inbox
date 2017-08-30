@@ -9,21 +9,21 @@
 - [x] If there are labels on a message, they should appear
 - [x] If the message is starred, then the star should be filled in, otherwise it should be empty
 ## Starring
-- [ ] Users should be able to star and unstar a message.
+- [x] Users should be able to star and unstar a message.
 
 ## When a user clicks the star next to a message
-- [ ] Then it should toggle whether the message is starred or not
-- [ ] For example if it was starred, and you clicked on it, it should be unstarred
-Selecting Individual Messages
-- [ ] Users should be able to select and deselect individual messages.
+- [x] Then it should toggle whether the message is starred or not
+- [x] For example if it was starred, and you clicked on it, it should be unstarred
+## Selecting Individual Messages
+- [x] Users should be able to select and deselect individual messages.
 
 ## When a user checks the checkbox on a message
-- [ ] Then the message should be highlighted
+- [x] Then the message should be highlighted
 
 ## When a user unchecks the checkbox on a message
-- [ ] Then the message should _not_ be highlighted
+- [x] Then the message should _not_ be highlighted
 - [ ] Bulk Select / Deselect
-- [ ] Users should be able to select and deselect messages.
+- [x] Users should be able to select and deselect messages.
 
 ## Given that no messages are selected
 - [ ] When a user checks the "Select All" checkbox

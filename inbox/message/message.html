@@ -6,7 +6,7 @@ class="row message">
         <input type="checkbox" ng-model="selected" />
       </div>
       <div class="col-xs-2">
-        <i class="star fa" ng-class="{'fa-star' : messages.starred, 'fa-star-o' : !messages.starred}"></i>
+        <i class="star fa" ng-click="$ctrl.toggleStar(messages)" ng-class="{'fa-star' : messages.starred, 'fa-star-o' : !messages.starred}"></i>
       </div>
     </div>
   </div>

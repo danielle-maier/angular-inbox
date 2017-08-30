@@ -9,6 +9,10 @@
         vm.$onInit = function() {
           const data = angular.fromJson(json);
           vm.message = data;
+
+          vm.toggleStar= function(messages){
+            messages.starred = !messages.starred;
+          }
         }
       },
       templateUrl: './inbox/message/message.html'
