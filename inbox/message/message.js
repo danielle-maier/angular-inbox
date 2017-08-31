@@ -3,16 +3,27 @@
 
   angular
     .module('app')
-    .component('message', {
-      controller: function() {
-        const vm = this;
-        vm.$onInit = function() {
-          const data = angular.fromJson(json);
-          vm.message = data;
 
-          vm.toggleStar = function(messages) {
-            messages.starred = !messages.starred;
-          }
+    .component('message', {
+      bindings: {
+        messageselected: '<',
+      },
+      controller: function() {
+
+        const vm = this
+        //  console.log(vm)
+
+        vm.selectedMessage = function(selected, messages) {
+          messages.selected = selected
+          //  console.log(messages);
+        }
+
+        vm.selectmessage = function(selected) {
+          //    console.log(selected)
+          //console.log(vm.anything);
+        }
+        vm.toggleStar = function(message) {
+          message.starred = !message.starred
         }
       },
       templateUrl: './inbox/message/message.html'

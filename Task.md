@@ -22,7 +22,7 @@
 
 ## When a user unchecks the checkbox on a message
 - [x] Then the message should _not_ be highlighted
-- [ ] Bulk Select / Deselect
+## Bulk Select / Deselect
 - [x] Users should be able to select and deselect messages.
 
 ## Given that no messages are selected
