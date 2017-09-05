@@ -8,7 +8,7 @@
     },
     controller: function() {
       const vm=this
-    console.log(vm);
+    
     },
     templateUrl: './inbox/messagelist/messagelist.html'
   })

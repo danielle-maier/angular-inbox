@@ -6,25 +6,18 @@
 
     .component('message', {
       bindings: {
-        messageselected: '<',
+        data: '<',
       },
       controller: function() {
-
-        const vm = this
-        //  console.log(vm)
-
-        vm.selectedMessage = function(selected, messages) {
-          messages.selected = selected
-          //  console.log(messages);
+        const vm = this;
+        vm.starMessage = function(message) {
+          var status = message.starred;
+          message.starred = !message.starred;
+        }
+        vm.checkedMessage = function(selected, message) {
+          message.selected = selected;
         }
 
-        vm.selectmessage = function(selected) {
-          //    console.log(selected)
-          //console.log(vm.anything);
-        }
-        vm.toggleStar = function(message) {
-          message.starred = !message.starred
-        }
       },
       templateUrl: './inbox/message/message.html'
     });
