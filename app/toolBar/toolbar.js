@@ -4,7 +4,7 @@
     .module('app', )
     .component('toolbar', {
       controller: 'toolbarController',
-      templateUrl: 'app/toolBar/toolbar_template.html',
+      templateUrl: 'app/toolBar/toolbar.html',
       bindings: {
         datamsgs: '<'
       }

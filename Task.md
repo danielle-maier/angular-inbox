@@ -26,73 +26,73 @@
 - [x] Users should be able to select and deselect messages.
 
 ## Given that no messages are selected
-- [ ] When a user checks the "Select All" checkbox
+- [x] When a user checks the "Select All" checkbox
 - [ ] Then it should check all messages (and highlight them)
 
 ## Given that some messages are selected
-- [ ] When a user checks the "Select All" checkbox
-- [ ] Then it should check all messages (and highlight them)
+- [x] When a user checks the "Select All" checkbox
+- [x] Then it should check all messages (and highlight them)
 
 ## Given that all messages are selected
 ## When a user unchecks the "Select All" checkbox
-- [ ] Then it should uncheck all messages (and unhighlight them)
-- [ ] Marking Messages as Read
-- [ ] Users should be able to mark messages as read.
+- [x] Then it should uncheck all messages (and unhighlight them)
+- [x] Marking Messages as Read
+- [x] Users should be able to mark messages as read.
 
 ## When a user selects messages
-- [ ] And presses "Mark As Read"
-- [ ] Then each selected message should be marked as read
-- [ ] And should no longer be bold
-- [ ] Marking Messages as Unread
-- [ ] Users should be able to mark messages as unread.
+- [x] And presses "Mark As Read"
+- [x] Then each selected message should be marked as read
+- [x] And should no longer be bold
+- [x] Marking Messages as Unread
+- [x] Users should be able to mark messages as unread.
 
 ## When a user selects messages
-- [ ] And presses "Mark As Unread"
-- [ ] Then each selected message should be marked as unread
-- [ ] And should should appear bold
+- [x] And presses "Mark As Unread"
+- [x] Then each selected message should be marked as unread
+- [x] And should should appear bold
 ## Deleting Messages
-- [ ] Users should be able to delete selected messages
+- [x] Users should be able to delete selected messages
 
 ## When a user selects messages
-- [ ] And presses "Delete" (the Trash icon)
-- [ ] Then each selected message should be removed from the list
-- [ ] And the unread count should update
-- [ ] And "Select All" button should update
+- [x] And presses "Delete" (the Trash icon)
+- [x] Then each selected message should be removed from the list
+- [x] And the unread count should update
+- [x] And "Select All" button should update
 ## Adding Labels
-- [ ] When a user selects messages from the sidebar
-- [ ] And chooses a label from the "Add Label" dropdown
-- [ ] Then that label should be added to all selected messages
-- [ ] But if the message already contains the label then it should not be added twice
+- [x] When a user selects messages from the sidebar
+- [x] And chooses a label from the "Add Label" dropdown
+- [x] Then that label should be added to all selected messages
+- [x] But if the message already contains the label then it should not be added twice
 ### NOTE: It's OK to hard-code the list of labels
 
 ## Removing Labels
 ### When a user selects messages from the sidebar
-- [ ] And chooses a label from the "Remove Label" dropdown
-- [ ] Then that label should be removed from all of the selected messages that contain the label
+- [x] And chooses a label from the "Remove Label" dropdown
+- [x] Then that label should be removed from all of the selected messages that contain the label
 ### NOTE: It's OK to hard-code the list of labels
 
 ### NOTE: If you try to remove a label from a message that doesn't have that label, there should be no errors
 
 ## Unread Message Count
-- [ ] Users should always see the number of unread messages
+- [x] Users should always see the number of unread messages
 
 ## When a user changes which messages are read / unread
-- [ ] Then the unread count in the upper right-hand corner should update
-- [ ] And when there are 0 unread messages it should display "0 unread messages"
-- [ ] And when there is 1 unread message it should display "1 unread message"
-- [ ] And when there's more than 1 unread message it should display "_n_ unread messages"
+- [x] Then the unread count in the upper right-hand corner should update
+- [x] And when there are 0 unread messages it should display "0 unread messages"
+- [x] And when there is 1 unread message it should display "1 unread message"
+- [x] And when there's more than 1 unread message it should display "_n_ unread messages"
 ## Select All Button State
-- [ ] Users should see the state of the select all button change as messages are selected
+- [x] Users should see the state of the select all button change as messages are selected
 
 ## When no messages are checked
-- [ ] Then the "Select All" button should be in the "unchecked" state
+- [x] Then the "Select All" button should be in the "unchecked" state
 
 ## When some messages are checked
-- [ ] Then the "Select All" button should be in the "half-checked" state
+- [x] Then the "Select All" button should be in the "half-checked" state
 
 ## When all messages are checked
-- [ ] Then the "Select All" button should be in the "checked" state
+- [x] Then the "Select All" button should be in the "checked" state
 ### NOTE: the "Select All" button must stay in sync at all times.
 
 ## Select All Button State
-- [ ] Users should not be able to click on toolbar items when no messages are selected
+- [x] Users should not be able to click on toolbar items when no messages are selected

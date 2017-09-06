@@ -1,3 +1,5 @@
-# Galvanize Inbox using angularjs
+# Galvanize Inbox using Angular.js
 
-[Live Site](https://dm-angular-inbox.firebaseapp.com/)
+This is a simple gmail like single page app.
+
+![Live Site](https://dm-angular-inbox.firebaseapp.com/)

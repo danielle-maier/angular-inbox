@@ -4,6 +4,6 @@
     .module('app', )
     .component('compose', {
       controller: 'composeController',
-      templateUrl: 'app/composeForm/composeForm_template.html'
+      templateUrl: 'app/composeForm/composeForm.html'
     });
 })();
