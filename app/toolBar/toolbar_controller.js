@@ -6,6 +6,7 @@
 
   function toolbarController($http) {
     const vm = this;
+    const url = 'https://secret-bastion-10166.herokuapp.com/api/messages';
     vm.$onInit = function() {
 
       vm.allSelected = function(messages) {
@@ -35,38 +36,66 @@
       }
     }
     vm.markAsRead = function(messages) {
+      let arrayOfIds = [];
       if (messages !== undefined) {
-        for (var i = 0; i < messages.length; i++) {
+        for (let i = 0; i < messages.length; i++) {
           if (messages[i].selected) {
             messages[i].read = true;
+            arrayOfIds.push(messages[i].id)
+            let body = {
+              messageIds: arrayOfIds,
+              command: 'read',
+              read: true
+            };
+            $http.patch(url, JSON.stringify(body))
+              .then(function(response) {});
           }
         }
       }
     }
     vm.markAsUnRead = function(messages) {
+      let arrayOfIds = [];
       if (messages !== undefined) {
-        for (var i = 0; i < messages.length; i++) {
+        for (let i = 0; i < messages.length; i++) {
           if (messages[i].selected) {
             messages[i].read = false;
+            arrayOfIds.push(messages[i].id)
+            let body = {
+              messageIds: arrayOfIds,
+              command: 'read',
+              read: false
+            };
+            $http.patch(url, JSON.stringify(body))
+              .then(function(response) {});
           }
         }
       }
     }
     vm.addLabel = function(messages, label) {
+      let arrayOfIds = [];
       if (messages !== undefined) {
-        for (var i = 0; i < messages.length; i++) {
-          var labelExist = messages[i].labels.includes(label);
+        for (let i = 0; i < messages.length; i++) {
+          let labelExist = messages[i].labels.includes(label);
           if (messages[i].selected && !labelExist) {
             messages[i].labels.push(label);
+            arrayOfIds.push(messages[i].id)
           }
         }
+        let body = {
+          messageIds: arrayOfIds,
+          command: 'addLabel',
+          label: label
+        };
+        $http.patch(url, JSON.stringify(body))
+          .then(function(response) {});
       }
     }
     vm.removeLabel = function(messages, label) {
+      let arrayOfIds = [];
       if (messages !== undefined) {
-        for (var i = 0; i < messages.length; i++) {
+        for (let i = 0; i < messages.length; i++) {
           if (messages[i].selected) {
-            var index = messages[i].labels.indexOf(label);
+            let index = messages[i].labels.indexOf(label);
             if (index > -1) {
               messages[i].labels.splice(index, 1);
             }
@@ -77,15 +106,15 @@
     vm.changeSelect = function(messages) {
       if (messages !== undefined) {
         if (vm.allSelected(messages)) {
-          for (var i = 0; i < messages.length; i++) {
+          for (let i = 0; i < messages.length; i++) {
             messages[i].selected = false;
           }
         } else if (vm.someSelected(messages)) {
-          for (var i = 0; i < messages.length; i++) {
+          for (let i = 0; i < messages.length; i++) {
             messages[i].selected = true;
           }
         } else if (vm.allNotSelected(messages)) {
-          for (var i = 0; i < messages.length; i++) {
+          for (let i = 0; i < messages.length; i++) {
             messages[i].selected = true;
           }
         }
@@ -93,8 +122,8 @@
     }
     vm.countUnreadMessages = function(messages) {
       if (messages !== undefined) {
-        var count = 0;
-        for (var i = 0; i < messages.length; i++) {
+        let count = 0;
+        for (let i = 0; i < messages.length; i++) {
           if (messages[i].read == false) {
             count++;
           }
@@ -103,9 +132,17 @@
       }
     }
     vm.deleteMessage = function(messages) {
+      let arrayOfIds = [];
       if (messages !== undefined) {
-        for (var i = 0; i < messages.length; i++) {
+        for (let i = 0; i < messages.length; i++) {
           if (messages[i].selected) {
+            arrayOfIds.push(messages[i].id)
+            let body = {
+              messageIds: arrayOfIds,
+              command: 'delete'
+            };
+            $http.patch(url, JSON.stringify(body))
+              .then(function(response) {});
             messages.splice(i, 1);
             i--;
           }
