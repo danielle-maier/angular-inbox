@@ -97,10 +97,18 @@
           if (messages[i].selected) {
             let index = messages[i].labels.indexOf(label);
             if (index > -1) {
+              arrayOfIds.push(messages[i].id)
               messages[i].labels.splice(index, 1);
             }
           }
         }
+        let body = {
+          messageIds: arrayOfIds,
+          command: 'removeLabel',
+          label: label
+        };
+        $http.patch(url, JSON.stringify(body))
+          .then(function(response) {});
       }
     }
     vm.changeSelect = function(messages) {
