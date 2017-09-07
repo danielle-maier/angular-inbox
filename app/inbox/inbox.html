@@ -1,2 +1,6 @@
-<toolbar datamsgs="$ctrl.messages"> </toolbar>
+<toolbar datamsgs="$ctrl.messages"
+         formshow="$ctrl.formshow"> </toolbar>
+<compose formshow= "$ctrl.formshow"
+         formcontents="$ctrl.messages"
+         ng-hide="$ctrl.formshow.showvalue"></compose>
 <messagelist datamsg="$ctrl.messages"> </messagelist>

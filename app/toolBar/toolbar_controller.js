@@ -9,6 +9,12 @@
     const url = 'https://secret-bastion-10166.herokuapp.com/api/messages';
     vm.$onInit = function() {
 
+      vm.formcontrol = function() {
+
+           vm.formshow.showvalue = !vm.formshow.showvalue;
+          console.log(vm.formshow);
+
+      }
       vm.allSelected = function(messages) {
         if (messages !== undefined) {
           return status = messages.every(function(data) {
@@ -97,6 +103,7 @@
           if (messages[i].selected) {
             let index = messages[i].labels.indexOf(label);
             if (index > -1) {
+
               arrayOfIds.push(messages[i].id)
               messages[i].labels.splice(index, 1);
             }

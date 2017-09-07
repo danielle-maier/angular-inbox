@@ -12,8 +12,10 @@
       const url = 'https://secret-bastion-10166.herokuapp.com/api/messages';
       $http.get(url).then(function(messages) {
         vm.messages = messages.data._embedded.messages
-        // console.log(messages.data._embedded.messages)
       });
+      vm.formshow ={
+            showvalue:true
+          }
     }
   }
 }());
