@@ -4,7 +4,7 @@
       <span class="badge badge">{{$ctrl.countUnreadMessages($ctrl.datamsgs)}}</span> unread messages
     </p>
     <a class="btn btn-danger">
-      <i class="fa fa-plus" ng-click="$ctrl.formcontrol($ctrl.composebutton)"></i>
+      <i class="fa fa-plus" ng-click="$ctrl.formcontrol"></i>
     </a>
     <button class="btn btn-default">
       <i class="fa " ng-click="$ctrl.changeSelect($ctrl.datamsgs)"
@@ -23,7 +23,7 @@
       Mark As Unread
     </button>
 
-    <select class="form-control label-select" ng-model="selectedLabel" ng-Change="$ctrl.addLabel($ctrl.datamsgs,selectedLabel)">
+    <select class="form-control label-select" ng-model="selectedLabel" ng-change="$ctrl.addLabel($ctrl.datamsgs,selectedLabel)">
       <option>Apply label</option>
       <option value="dev">dev</option>
       <option value="personal">personal</option>

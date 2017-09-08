@@ -10,10 +10,8 @@
     vm.$onInit = function() {
 
       vm.formcontrol = function() {
-
-           vm.formshow.showvalue = !vm.formshow.showvalue;
-          console.log(vm.formshow);
-
+        console.log("hi");
+        // vm.formshow.showvalue = !vm.formshow.showvalue;
       }
       vm.allSelected = function(messages) {
         if (messages !== undefined) {
