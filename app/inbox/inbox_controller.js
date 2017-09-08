@@ -14,7 +14,7 @@
         vm.messages = messages.data._embedded.messages
       });
       vm.formshow ={
-            showvalue:true
+            showvalue:false
           }
     }
   }

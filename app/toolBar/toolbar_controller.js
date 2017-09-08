@@ -9,9 +9,9 @@
     const url = 'https://secret-bastion-10166.herokuapp.com/api/messages';
     vm.$onInit = function() {
 
-      vm.formcontrol = function() {
-        console.log("hi");
-        // vm.formshow.showvalue = !vm.formshow.showvalue;
+      vm.formcontrol = function(form) {
+        form = vm.formshow.showvalue;
+        vm.formshow.showvalue = !vm.formshow.showvalue;
       }
       vm.allSelected = function(messages) {
         if (messages !== undefined) {
